@@ -7,7 +7,8 @@ This document records topics related to experience with implementing and using U
 * Raffaele Zullo, Tom Jones, and Gorry Fairhurst, "Overcoming the sorrows of the young UDP Options", 
 in 2020 Network Traffic Measurement and Analysis Conference (TMA), IEEE, 2020.
 https://abdn.elsevierpure.com/en/publications/overcoming-the-sorrows-of-the-young-udp-options
-- Raffaele Zuulo did a partial implementation in a test tool using Android, which was ran on a range of platforms. 
+- Raffaele Zuulo did a CCO implementation in a test tool with Mobile Tracebox Core
+using Android and one in Tracemore (tracebox). 
 It was used to verify network traversal of the options space (showing the method could be used 
 across Internet paths with and without NAPT).
 - Other related results were reported in:
@@ -20,7 +21,7 @@ This draft was finalled incorporated in UDP Options.
 The also talk provides measurement data and a commited patch to FreeBSD.
 
 * Tom Jones reported an implementation in a fork of FreeBSD as the spec was being developed in TSVWG, 
-at IETF 101, London.
+at IETF 101, London with prototype support for FreeBSD, Wireshark and Packetdrill tests.
 https://datatracker.ietf.org/meeting/101/materials/slides-101-tsvwg-sessa-53-tom-jones-udp-options-implementation-02.
 - Tom presented an update at TSVWG IETF 103 Bangkok. He did not implement the current fragmentation code, 
 which was changed after his work. 
