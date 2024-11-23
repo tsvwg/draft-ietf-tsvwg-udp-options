@@ -28,7 +28,7 @@ which was changed after his work.
 * Tom Jones Tom reported experiments using a prototype of DPLPMTUD, using RES/REQ exchanges from draft -02.
 (The wire format of these options has not changed since). 
 
-* R. Mantu, M. Chiroiu, N. T, ăpus, , Framework for evaluating TCP/IP Extensions in Communication Protocols, 
+* R. Mantu, M. Chiroiu, N. T, Apus, "Framework for evaluating TCP/IP Extensions in Communication Protocols", 
 INTERNATIONAL JOURNAL OF COMPUTERS COMMUNICATIONS & CONTROL Online ISSN 1841-9844, ISSN-L 1841-9836, 
 Volume: 19, Issue: 2, Month: April, Year: 2024 Article Number: 4906, https://doi.org/10.15837/ijccc.2024.2.4906 
 - Mantu et al independently developed an extendable packet annotation tool for IP, TCP and UDP options, 
