@@ -1,0 +1,37 @@
+Implementation Experience with UDP Options
+==========================================
+
+UDP Options is a product of the IETF TSVWG working group. 
+This document records topics related to experience with implementing and using UDop Options.
+
+* Raffaele Zullo, Tom Jones, and Gorry Fairhurst. Overcoming the sorrows of the young udp options. 
+In 2020 Network Traffic Measurement and Analysis Conference (TMA), IEEE, 2020.
+https://abdn.elsevierpure.com/en/publications/overcoming-the-sorrows-of-the-young-udp-options
+
+Raffaele Zuulo did a partial implementation in a test tool using Android, which he ran in a range of platforms. 
+This was used to verify network traversal of the options space (showing the method could be used 
+across Internet paths with and without NAPT).
+
+Other related measurement campiagns were reported in:
+    * https://ripe81.ripe.net/presentations/52-ripe81-matwg-zullo-udp-options-presentation.pdf
+    * Presentation at MAPRG IETF 103, Bangkok
+
+* Tom Jones reported an implementation in a fork of FreeBSD as the spec was being developed in TSVWG.
+IETF 101 London.
+https://datatracker.ietf.org/meeting/101/materials/slides-101-tsvwg-sessa-53-tom-jones-udp-options-implementation-02.
+* Tom presented an update at TSVWG IETF 103 Bangkok. He did not implement the current fragmentation code, 
+which was changed after his work. 
+
+* Tom Jones Tom reported experiments using a prototype of DPLPMTUD, using  RES/REQ  exchanges from -02.
+(The wire format of which has not changed since). 
+
+* R. Mantu, M. Chiroiu, N. T, ăpus, , Framework for evaluating TCP/IP Extensions in Communication Protocols, 
+INTERNATIONAL JOURNAL OF COMPUTERS COMMUNICATIONS & CONTROL Online ISSN 1841-9844, ISSN-L 1841-9836, 
+Volume: 19, Issue: 2, Month: April, Year: 2024 Article Number: 4906, https://doi.org/10.15837/ijccc.2024.2.4906 
+
+Mantu et al independently developed an extendable packet annotation tool for IP, TCP and UDP options, 
+based on NetfilterQueue with UDP Options support based on draft-ietf-tsvwg-udp-options-07.  
+This tested 4x NOP; 4x NOP & CCO Timestamp Timestamp & CCO Experimental Experimental & CCO Unassigned Unassigned & CCO.
+It concluded: with few exceptions, all other providers [than google] have exceedingly high acceptance rates. We note that we did not encounter any cases in which UDP options were stripped or modified while also allowing the base packet to pass. 
+
+This document was last update Sar 23rd Nov 2024.
