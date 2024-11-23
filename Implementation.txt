@@ -25,7 +25,7 @@ https://datatracker.ietf.org/meeting/101/materials/slides-101-tsvwg-sessa-53-tom
 - Tom presented an update at TSVWG IETF 103 Bangkok. He did not implement the current fragmentation code, 
 which was changed after his work. 
 
-* Tom Jones Tom reported experiments using a prototype of DPLPMTUD, using RES/REQ exchanges from draft -02.
+* Tom Jones reported experiments using a prototype of DPLPMTUD, using RES/REQ exchanges of udp-options, using draft -02.
 (The wire format of these options has not changed since). 
 
 * R. Mantu, M. Chiroiu, N. T, Apus, "Framework for evaluating TCP/IP Extensions in Communication Protocols", 
