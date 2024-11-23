@@ -16,8 +16,8 @@ across Internet paths with and without NAPT).
 * Gorry Fairhurst, Tom Jones, Raffaele Zullo, “A Tale of Two Checksums”, MAPRG IETF 103, Bangkok.
 https://datatracker.ietf.org/meeting/103/materials/slides-103-maprg-a-tale-of-two-checksums-tom-jones-00
 - Presented an updated CCO method (draft-ietf-fairhurst-udp-options-cco-00).
-This was finalled incorporated in UDp Options. 
-The talk provides measurement data and a commited to FreeBSD.
+This draft was finalled incorporated in UDP Options. 
+The also talk provides measurement data and a commited patch to FreeBSD.
 
 * Tom Jones reported an implementation in a fork of FreeBSD as the spec was being developed in TSVWG, 
 at IETF 101, London.
