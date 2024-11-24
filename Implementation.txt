@@ -1,61 +1,86 @@
 Implementation Experience with UDP Options
 ==========================================
 
-UDP Options is a product of the IETF TSVWG working group. 
-This document records topics related to experience with implementing and using UDP Options.
+UDP Options is a product of the IETF TSVWG working group. This 
+document records topics related to experience with implementing and 
+using UDP Options.
 
-* Raffaele Zullo, Tom Jones, and Gorry Fairhurst, "Overcoming the sorrows of the young UDP Options", 
-in 2020 Network Traffic Measurement and Analysis Conference (TMA), IEEE, 2020.
-https://abdn.elsevierpure.com/en/publications/overcoming-the-sorrows-of-the-young-udp-options
+* Raffaele Zullo, Tom Jones, and Gorry Fairhurst, "Overcoming the 
+sorrows of the young UDP Options",  in 2020 Network Traffic 
+Measurement and Analysis Conference (TMA), IEEE, 2020.
+https://abdn.elsevierpur.com/en/publications/overcoming-the-sorrows-of
+-the-young-udp-options
 https://dl.ifip.org/db/conf/tma/tma2020/tma2020-camera-paper70.pdf
-- Raffaele Zullo did a CCO implementation in a test tool with Mobile Tracebox Core
-using Android and one in Tracemore (tracebox).
-It was used to verify network traversal of the options space (showing the method could be used 
-across Internet paths with and without NAPT).
-- Other related results were reported in:
-https://ripe81.ripe.net/presentations/52-ripe81-matwg-zullo-udp-options-presentation.pdf
+- Raffaele Zullo did a CCO implementation in a test tool with Mobile 
+Tracebox Core using Android and one in Tracemore (tracebox). It was 
+used to verify network traversal of the options space (showing the 
+method could be used across Internet paths with and without NAPT).
+- Other related results were reported in: 
+https://ripe81.ripe.net/presentations/52-ripe81-matwg-zullo-udp-option
+s-presentation.pdf
   
-* Gorry Fairhurst, Tom Jones, Raffaele Zullo, “A Tale of Two Checksums”, MAPRG IETF 103, Bangkok.
-https://datatracker.ietf.org/meeting/103/materials/slides-103-maprg-a-tale-of-two-checksums-tom-jones-00
-- Presented an updated CCO method (draft-ietf-fairhurst-udp-options-cco-00).
-The checksum proposed in this draft was incorporated into the current UDP Options draft as the content
-of the current OCS field.
+* Gorry Fairhurst, Tom Jones, Raffaele Zullo, “A Tale of Two 
+Checksums”, MAPRG IETF 103, Bangkok.
+https://datatracker.ietf.org/meeting/103/materials/slides-103-maprg-a-
+tale-of-two-checksums-tom-jones-00
+- Presented an updated CCO method 
+(draft-ietf-fairhurst-udp-options-cco-00). The checksum proposed in 
+this draft was incorporated into the current UDP Options draft as the 
+content of the current OCS field.
 
-* Tom Jones reported an implementation in a fork of FreeBSD as the spec was being developed in TSVWG, at IETF 101,
-London with prototype support for FreeBSD, Wireshark and Packetdrill tests. The talk has a pointer to the FreeBSD patch.
-The presentation also reported experiments using a prototype of DPLPMTUD, using RES/REQ exchanges, which at the time
-were proposed UDP options. They were later included into the WG draft, and the wire format has not changed since.
-https://datatracker.ietf.org/meeting/101/materials/slides-101-tsvwg-sessa-53-tom-jones-udp-options-implementation-02.
+* Tom Jones reported an implementation in a fork of FreeBSD as the 
+spec was being developed in TSVWG, at IETF 101, London with prototype 
+support for FreeBSD, Wireshark and Packetdrill tests. The talk has a 
+pointer to the FreeBSD patch. The presentation also reported 
+experiments using a prototype of DPLPMTUD, using RES/REQ exchanges, 
+which at the time were proposed UDP options. They were later included 
+into the WG draft, and the wire format has not changed since.
+https://datatracker.ietf.org/meeting/101/materials/slides-101-tsvwg-se
+ssa-53-tom-jones-udp-options-implementation-02.
 - Tom presented an update at TSVWG IETF 103 Bangkok.
-https://datatracker.ietf.org/meeting/103/materials/slides-103-tsvwg-sessa-51-cco-and-implementation-status-for-udp-options-02
-The talk also provided measurement data (a summary of the maprg talk) and updated status of the prototype implementation.
-The prototype did not include the fragmentation option (note that the specification for that option has since been updated). 
+https://datatracker.ietf.org/meeting/103/materials/slides-103-tsvwg-se
+ssa-51-cco-and-implementation-status-for-udp-options-02
+The talk also provided measurement data (a summary of the maprg talk) 
+and updated status of the prototype implementation. The prototype did 
+not include the fragmentation option (note that the specification for 
+that option has since been updated).
 
-* R. Mantu, M. Chiroiu, N. T, Apus, "Framework for evaluating TCP/IP Extensions in Communication Protocols", 
-INTERNATIONAL JOURNAL OF COMPUTERS COMMUNICATIONS & CONTROL Online ISSN 1841-9844, ISSN-L 1841-9836, 
-Volume: 19, Issue: 2, Month: April, Year: 2024 Article Number: 4906, https://doi.org/10.15837/ijccc.2024.2.4906 
-- Mantu et al independently developed an extendable packet annotation tool for IP, TCP and UDP options, 
-based on NetfilterQueue with UDP Options support based on draft-ietf-tsvwg-udp-options-07.  
-This tested 4x NOP; 4x NOP & CCO; Timestamp; Timestamp & CCO; Experimental; Experimental & CCO; Unassigned; Unassigned & CCO.
-It concluded: with few exceptions that all providers, other than Google, have exceedingly high acceptance rates. The study
-did not encounter any cases in which UDP options were stripped or modified while also allowing the base packet to pass.
+* R. Mantu, M. Chiroiu, N. T, Apus, "Framework for evaluating TCP/IP 
+Extensions in Communication Protocols",  INTERNATIONAL JOURNAL OF 
+COMPUTERS COMMUNICATIONS & CONTROL Online ISSN 1841-9844, ISSN-L 
+1841-9836, Volume: 19, Issue: 2, Month: April, Year: 2024 Article 
+Number: 4906, https://doi.org/10.15837/ijccc.2024.2.4906
+- Mantu et al independently developed an extendable packet annotation 
+tool for IP, TCP and UDP options, based on NetfilterQueue with UDP 
+Options support based on draft-ietf-tsvwg-udp-options-07. This tested 
+4x NOP; 4x NOP & CCO; Timestamp; Timestamp & CCO; Experimental; 
+Experimental & CCO; Unassigned; Unassigned & CCO. It concluded: with 
+few exceptions that all providers, other than Google, have 
+exceedingly high acceptance rates. The study did not encounter any 
+cases in which UDP options were stripped or modified while also 
+allowing the base packet to pass.
 
-Why are the editors proposing this to be considered as a PS rather than EXP?
-============================================================================
+Why are the editors proposing this to be considered as a PS rather 
+than EXP?
+======================================================================
+========
 
-This question was asked by the WG Chairs at IETF 103. Colin Perkins addressed 
-this issue at the mic, saying this is not really an experiment -- the spec is 
-well-defined and just does what it does. Any experiment (as noted by David Black)
-would just be to see whether there is uptake. Although those comments were made 
-6+ years ago, the editors think they still hold good to this day.
+This question was asked by the WG Chairs at IETF 103. Colin Perkins 
+addressed  this issue at the mic, saying this is not really an 
+experiment -- the spec is well-defined and just does what it does. 
+Any experiment (as noted by David Black) would just be to see whether 
+there is uptake. Although those comments were made 6+ years ago, the 
+editors think they still hold good to this day.
 
-This spec has received detailed scrutiny during its development. With detailed
-reviews each WGLC, and from the recent independent reviews (e.g., by 
-Colin Perkins and Erik Auerswald). The editors owe these reviewers a lot 
-for helping to eliminate errors and ambiguities from the specification of FRAG.
-A conformant implementation needs be able to reassemble just two  fragments
-of maximum link MTU. This removes most of the implementation complexity 
-that worried Tom Jones in his feedback, and the most recent revision of the 
-MRDS option makes it possible for senders to work within receiver implementations.
+This spec has received detailed scrutiny during its development. With 
+detailed reviews each WGLC, and from the recent independent reviews 
+(e.g., by Colin Perkins and Erik Auerswald). The editors owe these 
+reviewers a lot for helping to eliminate errors and ambiguities from 
+the specification of FRAG. A conformant implementation needs be able 
+to reassemble just two  fragments of maximum link MTU. This removes 
+most of the implementation complexity that worried Tom Jones in his 
+feedback, and the most recent revision of the MRDS option makes it 
+possible for senders to work within receiver implementations.
 
-This document was last updated on Sat 24th Nov 2024, G Fairhurst & C. M. Heard
+This document was last updated on Sat 24th Nov 2024, G Fairhurst & C. 
+M. Heard.
