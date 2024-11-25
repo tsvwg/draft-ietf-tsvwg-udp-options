@@ -8,21 +8,18 @@ using UDP Options.
 * Raffaele Zullo, Tom Jones, and Gorry Fairhurst, "Overcoming the 
 sorrows of the young UDP Options",  in 2020 Network Traffic 
 Measurement and Analysis Conference (TMA), IEEE, 2020.
-https://abdn.elsevierpur.com/en/publications/overcoming-the-sorrows-of
--the-young-udp-options
+https://abdn.elsevierpur.com/en/publications/overcoming-the-sorrows-of-the-young-udp-options
 https://dl.ifip.org/db/conf/tma/tma2020/tma2020-camera-paper70.pdf
 - Raffaele Zullo did a CCO implementation in a test tool with Mobile 
 Tracebox Core using Android and one in Tracemore (tracebox). It was 
 used to verify network traversal of the options space (showing the 
 method could be used across Internet paths with and without NAPT).
 - Other related results were reported in: 
-https://ripe81.ripe.net/presentations/52-ripe81-matwg-zullo-udp-option
-s-presentation.pdf
+https://ripe81.ripe.net/presentations/52-ripe81-matwg-zullo-udp-options-presentation.pdf
   
 * Gorry Fairhurst, Tom Jones, Raffaele Zullo, “A Tale of Two 
 Checksums”, MAPRG IETF 103, Bangkok.
-https://datatracker.ietf.org/meeting/103/materials/slides-103-maprg-a-
-tale-of-two-checksums-tom-jones-00
+https://datatracker.ietf.org/meeting/103/materials/slides-103-maprg-a-tale-of-two-checksums-tom-jones-00
 - Presented an updated CCO method 
 (draft-ietf-fairhurst-udp-options-cco-00). The checksum proposed in 
 this draft was incorporated into the current UDP Options draft as the 
@@ -60,10 +57,8 @@ exceedingly high acceptance rates. The study did not encounter any
 cases in which UDP options were stripped or modified while also 
 allowing the base packet to pass.
 
-Why are the editors proposing this to be considered as a PS rather 
-than EXP?
-======================================================================
-========
+Why are the editors proposing as a PS rather than EXP?
+======================================================
 
 This question was asked by the WG Chairs at IETF 103. Colin Perkins 
 addressed  this issue at the mic, saying this is not really an 
