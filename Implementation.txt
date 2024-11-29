@@ -55,6 +55,22 @@ exceedingly high acceptance rates. The study did not encounter any
 cases in which UDP options were stripped or modified while also 
 allowing the base packet to pass.
 
+The tabke below provides the implementation status of all currently
+specified options. Those marked with (*) are mandatory to implement.
+
+Kind    Length    Meaning                                  Impl. Status
+-----------------------------------------------------------------------
+-*      -         Option Checksum (OCS)                    Yes, as CCO
+0*      -         End of Options List (EOL)                Yes
+1*      -         No operation (NOP)                       Yes
+2*      6         Additional payload checksum (APC)        No
+3*      10/12     Fragmentation (FRAG)                     No
+4*      4         Maximum datagram size (MDS)              Yes, as MSS
+5*      5         Maximum reassembled datagram size (MRDS) No
+6*      6         Request (REQ)                            Yes
+7*      6         Response (RES)                           Yes
+8       10        Timestamps (TIME)                        Yes
+
 Why are the editors proposing this to be PS rather than EXP?
 ============================================================
 
